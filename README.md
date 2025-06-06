@@ -9,7 +9,6 @@ This project was completed as part of a collaborative effort among five members 
 ### Team Members and Roles
 1. **Loue Sauveur Christian**  
    - **Email**: [I.christian@alustudent.com]
-   - 
    - **Contribution**: Loue focused on building the model using L2 Regularization and the Adam optimizer. 
 
 
