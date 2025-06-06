@@ -72,7 +72,7 @@ The other models—**Loue**, **Kanisa**, and **Mugisha**—were very close, hove
 ###  Favour Akinwande
 - Used **L1 regularization** with **SGD** at a learning rate of `0.001`.
 - **Early stopping** patience of 15 allowed enough time to avoid underfitting.
-- Achieved the **highest accuracy (73.6%)** but had a lower F1 score and recall, likely due to class imbalance favoring the majority class.
+- Achieved the **highest accuracy (73.6%)** 
 
 ###  Kanisa Rebecca Majok Thiak
 - Used **L2 regularization** and **SGD** with a slightly aggressive learning rate of `0.01`.
