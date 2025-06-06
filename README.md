@@ -47,7 +47,7 @@ Joel Karekezi MugishaJoel Karekezi MugishaJolly UmulisaJolly Umulisagroup leader
 5                     | Kanisa Rebecca Majok Thiak       | L2 (0.01)                    | SGD (lr=0.01)           | Yes (Patience=10, monitor=val_loss)    | 0.3 / 0.2    | 0.7027	   | 0.5185   | 0.4102 | 0.7047
 6                     | Loue Sauveur Christian (lscblack)| L2 (0.001)                   | Adam (lr=0.0015)        | Yes (Patience=15, monitor=val_loss)    | 0.2          | 0.7027   | 0.5255   | 0.4219 | 0.6968
 7                     | Jolly Umilisa                    | L1 (0.005)                   | RMSprop (lr=0.002)      | Yes (Patience=6, monitor=val_loss)     | 0.4          |  0.6789       |  0.373 | 0.2541   |  0.7015
-8                     | Mugisha Karekezi Joel            | L1 + L2 (1e-4, 1e-3)         | RMSprop (lr=0.0008)     | Yes (Patience=15, monitor=val_loss)            | —            | 0.7012   | 0.5172   | 0.4102 | 0.7000
+8                     | Mugisha Karekezi Joel            | L1 + L2 (1e-4, 1e-3)         | RMSprop (lr=0.0008)     | Yes (Patience=15, monitor=val_loss)    | 0.3, 0.3          | 0.7012   | 0.5172   | 0.4102 | 0.7000
 
 
 ### Final Recommendation
