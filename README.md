@@ -41,7 +41,7 @@ Joel Karekezi MugishaJoel Karekezi MugishaJolly UmulisaJolly Umulisagroup leader
 
 | Train Instance         | Engineer Name                    | Regularizer                  | Optimizer               | Early Stopping                        | Dropout Rate | Accuracy | F1 Score | Recall | Precision
 ----------------------|----------------------------------|------------------------------|-------------------------|----------------------------------------|--------------|----------|----------|--------|-----------
-4                     | Favour Akinwande                 | L1 (0.0001)                  | SGD (lr=0.001)          | Yes (Patience=15, monitor=val_loss)    | 0.2 /0.2     |  0.736    | 0.498    | 0.426  | 0.498
+4                     | Favour Akinwande                 | L1 (0.0001)                  | SGD (lr=0.001)          | Yes (Patience=15, monitor=val_loss)    | 0.2 /0.2     |  0.6606    | 0.5751    | 0.6175 | 0.5381
 5                     | Kanisa Rebecca Majok Thiak       | L2 (0.01)                    | SGD (lr=0.01)           | Yes (Patience=10, monitor=val_loss)    | 0.3 / 0.2    | 0.7027	   | 0.5185   | 0.4102 | 0.7047
 6                     | Loue Sauveur Christian (lscblack)| L2 (0.001)                   | Adam (lr=0.0015)        | Yes (Patience=15, monitor=val_loss)    | 0.2          | 0.7027   | 0.5255   | 0.4219 | 0.6968
 7                     | Jolly Umilisa                    | L1 (0.005)                   | RMSprop (lr=0.002)      | Yes (Patience=6, monitor=val_loss)     | 0.4          |  0.6789       |  0.373 | 0.2541   |  0.7015
