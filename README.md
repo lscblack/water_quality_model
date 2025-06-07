@@ -152,6 +152,55 @@ Mugisha’s model balanced all metrics well. It showed strong precision and acce
 - Lowering the default classification threshold (e.g., from `0.5` to `0.45`) can improve recall  
 - Use **ROC curves** or **precision-recall trade-offs** to find the best threshold  
 
+## Loss Analysis
+
+While accuracy and F1 score were critical metrics, training and validation loss curves also helped reveal how each model behaved during training:
+
+- **Loue’s model** showed a smooth and stable drop in validation loss, which is consistent with its balanced accuracy, precision, and recall.  
+- **Jolly’s model** triggered early stopping after relatively few epochs, and its loss fluctuated more — likely due to the high dropout rate, which may have caused underfitting.  
+- For the remaining models (**Favour, Kanisa, Mugisha**), the loss decreased steadily and matched general trends in their accuracy and F1 scores. While we didn't observe major overfitting, further tuning of regularization and learning rates could improve their loss trajectories.
+- 
+## Experimentation Insights & Challenges
+
+- **Favour** experimented with L1 regularization and SGD. Initial runs with higher dropout led to underfitting; reducing it to 0.2 helped me improve recall significantly.
+- **Loue** tested both Adam and RMSprop; Adam proved more stable with quicker convergence and consistent performance.
+- **Kanisa** faced overfitting when using lower regularization; adjusting to L2 (0.01) helped improved precision but dropped recall.
+- **Jolly** tried RMSprop with L1, but the combination and high dropout (0.4) led to underfitting, harming recall.
+- **Mugisha** implemented dual regularization (L1 + L2), which stabilized training, though increasing recall further proved challenging.
+
+## Peer Review Model Evaluation
+
+### Favour Akinwande  
+My model achieved the **highest F1 score (0.5751)** and **recall (0.6175)**, making it the best at detecting unsafe water samples (class 1).  
+While my **accuracy (66.06%)** and **precision (0.5381)** were lower, this trade-off helped reduce false negatives.  
+Compared to **Kanisa**, who had higher precision but lower recall, my model better captured risky cases.  
+It also outperformed **Loue** in recall and F1, despite his higher accuracy.
+
+### Loue Sauveur Christian  
+My model offered the **most balanced performance** with **accuracy (70.27%)**, **F1 score (0.5255)**, and **recall (0.4219)**.  
+It performed reliably on both classes with **high precision (0.6968)** and steady validation loss.  
+More consistent than **Kanisa**, whose recall was lower, and only slightly behind **Favour** in minority class recall.  
+This makes my model ideal for general-purpose use.
+
+### Kanisa Rebecca Majok Thiak  
+My model had the **highest precision (0.7047)** and **accuracy (70.27%)**, showing strong control over false positives.  
+However, **recall (0.4102)** was lower, meaning some unsafe cases may have been missed.  
+Compared to **Jolly**, my model had higher recall and F1.  
+It was less effective than **Favour** in detecting minority class cases due to the lower recall.
+
+### Jolly Umilisa  
+My model showed **good precision (0.7015)** but the **lowest recall (0.2541)** and **F1 score (0.373)**.  
+Early stopping and high dropout likely caused underfitting, missing many unsafe samples.  
+Performance was weaker than **Kanisa** and **Favour**, who both had better recall and overall balance.  
+Improvement is needed in capturing class 1 instances.
+
+### Mugisha Karekezi Joel  
+My model had **strong precision (0.7000)** and **accuracy (70.12%)**, with moderate **recall (0.4102)**.  
+It performed similarly to **Kanisa**, but with added stability from dual regularization (L1 + L2).  
+Outperformed **Jolly** in all key metrics.  
+Slightly behind **Favour** in recall and F1 but showed overall robustness across metrics.
+``
+
 
 ## Best Performing Model Summary
 
