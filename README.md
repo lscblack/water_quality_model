@@ -1,5 +1,5 @@
 # Water Quality Analysis 
-This is a project our group, Peer Learning Group 6 worked on which focuses on using an AI model with TensorFlow/Keras for analyzing water quality data and predicting water quality. We predict the quality of water samples as either "Safe" or "Unsafe." Our model can generalize well on unseen data, thereby assisting in identifying potentially unsafe water samples.
+This is a project our group, Peer Learning Group 6 worked on which focuses on using a model with TensorFlow/Keras for analyzing water quality data and predicting water quality. We predict the quality of water samples as either "Safe" or "Unsafe." Our model can generalize well on unseen data, thereby assisting in identifying potentially unsafe water samples.
 
 
 ## Group Structure and Task Allocation
@@ -9,34 +9,20 @@ This project was completed as part of a collaborative effort among five members 
 ### Team Members and Roles
 1. **Loue Sauveur Christian**  
    - **Email**: [I.christian@alustudent.com]
-   - **Contribution**: Loue focused on building the model using L2 Regularization and the Adam optimizer. 
-
-
-Joel Karekezi MugishaJoel Karekezi MugishaJolly UmulisaJolly Umulisagroup leader Kanisa Rebecca Majok ThiakKanisa Rebecca Majok Thiak Loue Sauveur ChristianLoue Sauveur Christian
-
 
 2. **Favour Akinwande**  
    - **Email**: [f.akinwande@alustudent.com]
 
-   - **Contribution**: Favour worked on optimizing the model using L1 Regularization with the SGD optimizer for the model Implementation. 
-
-
 3. **Kanisa Rebecca Majok Thiak**  
-   - **Email**: [K.thiak@alustudent.com]    
-   - **Contribution**: Kanisa worked on optimizing the model using L2 Regularization with the SGD optimizer for the model Implementation. 
-
+   - **Email**: [K.thiak@alustudent.com]
+     
 4. **Joel Karekezi Mugisha**  
-   - **Email**: [j.mugisha@alustudent.com](mailto:a.ndayishim@alustudent.com)  
-   
-   - **Contribution**:  Mugisha worked on optimizing the model using both L1 and Regularization with the  RMSprop optimizer for the model Implementation. 
-
+   - **Email**: [j.mugisha@alustudent.com]  
 
 5. **Joel Karekezi Mugisha**  
    - **Email**: [j.umulisa@alustudent.com]
    
-   - **Contribution**:  Jolly worked on optimizing the model using both L1 and Regularization with the  RMSprop optimizer for the model Implementation. 
-
-#
+ #
 ## Outcome of Different Implementations in Summary
 
 | Train Instance         | Engineer Name                    | Regularizer                  | Optimizer               | Early Stopping                        | Dropout Rate | Accuracy | F1 Score | Recall | Precision
@@ -166,7 +152,7 @@ Mugisha’s model balanced all metrics well. It showed strong precision and acce
 - Lowering the default classification threshold (e.g., from `0.5` to `0.45`) can improve recall  
 - Use **ROC curves** or **precision-recall trade-offs** to find the best threshold  
 
-```markdown
+
 ## Best Performing Model Summary
 
 After evaluating five models based on their accuracy, F1 score, recall, and precision, we assessed their suitability for real-world use—particularly under class imbalance, where detecting the minority class (class 1) is crucial.
@@ -177,7 +163,8 @@ Recall: 0.6175 (Highest)
 Precision: 0.5381  
 Accuracy: 66.06%
 
-📌 This model demonstrated the strongest ability to identify class 1 instances, making it the most effective when false negatives are costly (e.g., missing at-risk water samples). The slightly lower accuracy is acceptable given the significantly better recall and F1 performance.
+**Why Favour’s model is best:**  
+This model demonstrated the strongest ability to identify class 1 instances, making it the most effective when false negatives are costly (e.g., missing at-risk water samples). The slightly lower accuracy is acceptable given the significantly better recall and F1 performance.
 
 ### Most Balanced Overall: Loue Sauveur Christian
 F1 Score: 0.5255  
@@ -185,24 +172,25 @@ Recall: 0.4219
 Precision: 0.6968  
 Accuracy: 70.27%
 
-📌 Loue’s model offers a consistent balance between precision and recall, with a higher overall accuracy. It’s well-suited for scenarios where both false positives and false negatives carry risk, and a general-purpose, stable model is preferred.
+**Why Loue’s model is strong:**  
+Loue’s model offers a consistent balance between precision and recall, with a higher overall accuracy. It’s well-suited for scenarios where both false positives and false negatives carry risk, and a general-purpose, stable model is preferred.
 
 ### Models with Trade-Offs
 
-🔸 Kanisa Rebecca Majok Thiak  
+**Kanisa Rebecca Majok Thiak**  
 Precision: 0.7047 (Highest)  
 Recall: 0.4102  
-📌 Excellent at avoiding false positives, but likely to miss many true class 1 instances.
+Summary: Excellent at avoiding false positives, but likely to miss many true class 1 instances.
 
-🔸 Mugisha Karekezi Joel  
+**Mugisha Karekezi Joel**  
 Precision: 0.7000  
 Recall: 0.4102  
-📌 Solid and stable, but recall could be improved to better serve imbalanced data use cases.
+Summary: Solid and stable, but recall could be improved to better serve imbalanced data use cases.
 
-🔸 Jolly Umilisa  
+**Jolly Umilisa**  
 Recall: 0.2541 (Lowest)  
 Precision: 0.7015  
-📌 High precision but poor class 1 detection. Likely affected by excessive dropout causing underfitting.
+Summary: High precision but poor class 1 detection. Likely affected by excessive dropout causing underfitting.
 
 ### Final Recommendation
 
@@ -212,4 +200,5 @@ Precision: 0.7015
 | Balanced performance                 | Loue Sauveur Christian    | Strong precision + recall + accuracy                               |
 | Avoiding false positives             | Kanisa or Jolly           | High precision, but may miss important class 1 cases (low recall)  |
 ```
+
 
